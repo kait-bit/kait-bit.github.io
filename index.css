@@ -1,0 +1,72 @@
+html, body {
+    background-color: #b4bfd1;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-top: 10%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Inknut Antiqua', Garamond, Georgia, 'Times New Roman', Times, serif;
+    font-size: 48;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Inknut Antiqua', Garamond, Georgia, 'Times New Roman', Times, serif;
+    font-size: 22;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.cards {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.cards img {
+    width: 325px;
+    border-radius: 20px; /* round corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cards a:nth-child(1) { 
+    transform: rotate(-4deg);
+    transform-origin: bottom right; /* keep inline with center cards */
+    margin-right: -120px; /* overlap */
+}
+
+.cards a:nth-child(2) { 
+    transform: rotate(-2deg); 
+    margin-right: -60px;
+}
+
+.cards a:nth-child(3) { 
+    transform: rotate(2deg); 
+    margin-left: -60px; 
+}
+
+.cards a:nth-child(4) { 
+    transform: rotate(4deg);
+    transform-origin: bottom left;
+    margin-left: -120px; 
+}
+
+
+.cards a:hover {
+    transition: transform 0.4s; /* slow rotation speed */
+    transform: rotate(var(--rotate));
+    z-index: 1; /* hovered card on top */
+}
