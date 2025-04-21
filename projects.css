@@ -2,30 +2,41 @@ body {
     background-color: #b4bfd1;
 }
 
+.navigation {
+    position: sticky;
+    top: 0;
+    background-color: #b4bfd1;
+    padding: 1px;
+    z-index: 2;
+}
+
 nav {
     background: #fff;
     border-radius: 30px;
     padding: 8px;
-    box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 10px;
     margin: 10px auto;
-    z-index: 1000;
     width: fit-content;
 }
 
 nav ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 25px;
+    padding: 4px 20px;
     margin: 6px;
-    font-size: 16px;
-    font-weight: 500;
+    font-family: 'Inknut Antiqua', Garamond, Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 525;
     color: #666;
     cursor: pointer;
     position: relative;
     z-index: 2;
     transition: color 0.3s;
+}
+
+nav ul li a {
+    color: #666;
+    text-decoration: none;
+    display: block;
 }
 
 nav ul li::after {
@@ -44,7 +55,11 @@ nav ul li::after {
 }
 
 nav ul li:hover {
-    color: #f0f2f5;
+    color: #fff;
+}
+
+nav ul li:hover a {
+    color: #fff;
 }
 
 nav ul li:hover::after {
@@ -53,8 +68,15 @@ nav ul li:hover::after {
 
 .content {
     padding: 20px;
+    padding-top: 30px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Inknut Antiqua', Garamond, Georgia, 'Times New Roman', Times, serif;
+    font-size: 20;
+    font-weight: 600;
 }
 
 .content-section {
@@ -66,10 +88,11 @@ nav ul li:hover::after {
 }
 
 .assignment-block {
-    background: white;
+    background: #fff;
+    border: 1px solid #283953;
     border-radius: 15px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .assignment-block img {
